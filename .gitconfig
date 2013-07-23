@@ -1,3 +1,6 @@
 [user]
 	email = syunsuke@weseek.co.jp
 	name = Syunsuke Komma
+[color]
+	ui = true
+	diff = true

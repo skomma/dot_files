@@ -1,0 +1,19 @@
+# Escape key is C-t, literal is a.
+escape ^Ta
+
+# scrollback buffer
+defscrollback 10000
+
+# clear scrollback buffer
+bind F eval 'scrollback 0' 'scrollback 1000' 'echo "scrollback buffer cleared"'
+
+# don't show startup message.
+startup_message off
+
+# changes the windowlist format to suit caption/hardstatus
+windowlist title  '%{u .g}Num Flags Title%=[0-9] select the number [movement] j,C-n:Down k,C-p:Up (C-)f:PageDown (C-)b:PageUp'
+windowlist string '%{.g}%3n %{.y}%f%09=%{dg} %t %='
+
+caption always '%?%F%{= gW}%:%{= Kk}%?%2n%f%07=%t%='
+
+hardstatus alwayslastline '%m/%d %02c:%s %{= .g}%H%{-} %L=%-w%45L>%{=u g.}%n %t%{-}%+w %-17<%=%{= .y}(%l)'
